@@ -49,6 +49,6 @@ jobs:
       - name: Update Docker Hub description
         uses: peter-evans/dockerhub-description@v2
         env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
-          DOCKERHUB_REPOSITORY: ${{ secrets.DOCKERHUB_USERNAME }}/python-github-backup
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKERHUB_REPOSITORY: ${{ secrets.DOCKER_USERNAME }}/python-github-backup
