@@ -1,7 +1,9 @@
 FROM python:alpine as builder
 
 ARG VERSION
-RUN pip install --prefix="/install" github-backup==$VERSION
+WORKDIR /tmp
+COPY install.sh .
+RUN ./install.sh
 
 FROM python:alpine
 
