@@ -44,4 +44,4 @@ jobs:
           --output "type=image,push=true" \
           --file ./Dockerfile . \
           --build-arg VERSION=${VERSION} \
-          --tag $(echo "${DOCKER_USERNAME}" | tr '[:upper:]' '[:lower:]')/python-github-backup:${VERSION}
+          --tag ${DOCKER_USERNAME}/python-github-backup:latest

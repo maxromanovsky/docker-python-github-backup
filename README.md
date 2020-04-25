@@ -1,5 +1,8 @@
 # Docker image for github-backup
 
+![Docker Image (latest) CI](https://github.com/maxromanovsky/docker-python-github-backup/workflows/Docker%20Image%20(latest)%20CI/badge.svg)
+![Docker Image (release) CI](https://github.com/maxromanovsky/docker-python-github-backup/workflows/Docker%20Image%20(release)%20CI/badge.svg)
+
 Source code repo: [josegonzalez/python-github-backup](https://github.com/josegonzalez/python-github-backup)
 
 ## Usage
