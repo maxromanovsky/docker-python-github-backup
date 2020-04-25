@@ -1,4 +1,4 @@
-# Multi-arch Docker image for github-backup
+# Multi-arch Docker image for python-github-backup
 
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/maxromanovsky/docker-python-github-backup)](https://github.com/maxromanovsky/docker-python-github-backup)
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/maxromanovsky/python-github-backup)](https://hub.docker.com/r/maxromanovsky/python-github-backup)
