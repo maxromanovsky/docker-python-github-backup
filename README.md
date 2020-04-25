@@ -1,5 +1,7 @@
-# Docker image for github-backup
+# Multi-arch Docker image for github-backup
 
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/maxromanovsky/docker-python-github-backup)](https://github.com/maxromanovsky/docker-python-github-backup)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/maxromanovsky/python-github-backup)](https://hub.docker.com/r/maxromanovsky/python-github-backup)
 ![Docker Image (latest) CI](https://github.com/maxromanovsky/docker-python-github-backup/workflows/Docker%20Image%20(latest)%20CI/badge.svg)
 ![Docker Image (release) CI](https://github.com/maxromanovsky/docker-python-github-backup/workflows/Docker%20Image%20(release)%20CI/badge.svg)
 
