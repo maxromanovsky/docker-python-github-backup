@@ -36,3 +36,9 @@ docker buildx build --platform linux/amd64,linux/arm/v7 --build-arg VERSION=$GIT
 brew install nektos/tap/act
 act -P ubuntu-latest=phaze9/action-runner -s DOCKER_USERNAME=maxromanovsky -s DOCKER_PASSWORD=docker-personal-access-token
 ```
+
+## Repository secrets
+
+- DOCKER_PASSWORD
+- DOCKER_USERNAME
+- SLACK_WEBHOOK
