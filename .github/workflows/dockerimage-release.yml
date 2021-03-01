@@ -11,34 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v2
-
-      # # https://github.community/t5/GitHub-Actions/How-to-get-just-the-tag-name/m-p/32167/highlight/true#M1027
-      # - name: Extract version from tag reference
-      #   id: get_version
-      #   run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-
-      # - name: Dockerhub login
-      #   env:
-      #     DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      #     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      #   run: |
-      #     echo "${DOCKER_PASSWORD}" | docker login --username ${DOCKER_USERNAME} --password-stdin
-
-      # - name: Set up Docker Buildx
-      #   id: buildx
-      #   uses: crazy-max/ghaction-docker-buildx@v1
-      #   with:
-      #     version: latest
-
-      #      - name: Remove builder
-      #        if: always()
-      #        run: docker buildx rm builder || true
-
-      #      - name: Available platforms
-      #        run: echo ${{ steps.buildx.outputs.platforms }}
-
       # https://github.com/marketplace/actions/checkout
       - name: Checkout
         uses: actions/checkout@v2
@@ -73,18 +45,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/python-github-backup:${{ steps.get_version.outputs.version-without-v }}
 
-      # - name: Buildx and push
-      #   env:
-      #     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      #     VERSION: ${{ steps.get_version.outputs.VERSION }}
-      #   run: |
-      #     docker buildx build \
-      #     --platform linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 \
-      #     --output "type=image,push=true" \
-      #     --file ./Dockerfile . \
-      #     --build-arg VERSION=${{ github.event.release.tag_name }} \
-      #     --tag ${DOCKER_USERNAME}/python-github-backup:${VERSION}
-
+      # https://github.com/rtCamp/action-slack-notify
       - name: Send Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
