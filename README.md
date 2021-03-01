@@ -7,6 +7,9 @@
 
 Source code repo: [josegonzalez/python-github-backup](https://github.com/josegonzalez/python-github-backup)
 
+## How to release
+- Create & push a new tag to repo :)
+
 ## Usage
 ```bash
 docker run --rm -e GITHUB_USERNAME=maxromanovsky -e GITHUB_TOKEN=gh_token -e GITHUB_USER_TO_BACKUP=maxromanovsky -v "/Users/max/Downloads/gh:/out" maxromanovsky/python-github-backup:latest
